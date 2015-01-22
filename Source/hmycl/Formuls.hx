@@ -55,14 +55,19 @@ class Formuls extends Sprite {
 		status = new TextField();
 		status.defaultTextFormat = format;
 		status.autoSize = TextFieldAutoSize.CENTER;
-		status.text = "Идёт подсчёт: 0%";
+		status.text = "Производятся расчёты: 0%";
 		
-		status.x = 400 - status.textWidth/2;
+		status.x = 400 - status.textWidth / 2;
 		status.y = 325 - status.textHeight / 2;
 		
 		progress = 0;
 		
 		addChild(status);
+		
+		addEventListener (Event.ADDED_TO_STAGE, onAddedToStage);
+	}
+	
+	private function  onAddedToStage (e:Event):Void {
 		
 		addEventListener (Event.ENTER_FRAME, onEnterFrame);
 		
@@ -71,7 +76,7 @@ class Formuls extends Sprite {
 	private function onEnterFrame (e:Event):Void {
 		
 		progress++;
-		status.text = "Идёт подсчёт: " + Math.round(progress/2) + "%";
+		status.text = "Производятся расчёты: " + Math.round(progress/2) + "%";
 		if (progress > 200) {
 			this.callback();
 		}

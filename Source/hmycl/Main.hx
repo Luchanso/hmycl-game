@@ -41,8 +41,8 @@ class Main extends Sprite {
 	private function initialization ():Void	{
 		
 		addChild(background);
-		// addChild(askScreen);
-		addChild(countScreen);
+		addChild(askScreen);
+		
 	}
 	
 	private function askScreenFinish (heigt, weight):Void {
