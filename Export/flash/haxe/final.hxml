@@ -18,6 +18,6 @@
 -swf-lib Export/flash/obj/assets.swf
 -swf-version 11.2
 -swf Export/flash/bin/HowMuchCoastYourLife.swf
--swf-header 800:650:30:FFFFFF
+-swf-header 800:650:40:FFFFFF
 -cp Export/flash/haxe
 -D final

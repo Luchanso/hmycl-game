@@ -18,7 +18,8 @@ class Main extends Sprite {
 	
 	private var background:Bitmap;	
 	private var askScreen:AskScreen;
-	//private var countScreen:CountScreen;
+	private var countScreen:CountScreen;
+	private var resultScreen:ResultScreen;
 	
 	public function new () {
 		
@@ -32,18 +33,29 @@ class Main extends Sprite {
 	private function load ():Void {
 		
 		background = new Bitmap (Assets.getBitmapData ("images/background.png"));
-		askScreen = new AskScreen (this.askScreenFinish);
+		askScreen = new AskScreen (askScreenFinish);
+		countScreen = new CountScreen (countScreenFinish);
 		
 	}
 	
 	private function initialization ():Void	{
 		
 		addChild(background);
-		addChild(askScreen);
-		
+		// addChild(askScreen);
+		addChild(countScreen);
 	}
 	
 	private function askScreenFinish (heigt, weight):Void {
-		this.removeChild(askScreen);
+		
+		removeChild(askScreen);
+		addChild(countScreen);
+		
+	}
+	
+	private function countScreenFinish ():Void {
+		
+		removeChild(countScreen);
+		// addChild(resultScreen);
+		
 	}
 }

@@ -54,6 +54,38 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("images/buttonNextPress.png", AssetType.IMAGE);
 		className.set ("images/buttonNextUp.png", __ASSET__images_buttonnextup_png);
 		type.set ("images/buttonNextUp.png", AssetType.IMAGE);
+		className.set ("images/formuls/formula (1).png", __ASSET__images_formuls_formula__1__png);
+		type.set ("images/formuls/formula (1).png", AssetType.IMAGE);
+		className.set ("images/formuls/formula (10).png", __ASSET__images_formuls_formula__10__png);
+		type.set ("images/formuls/formula (10).png", AssetType.IMAGE);
+		className.set ("images/formuls/formula (11).png", __ASSET__images_formuls_formula__11__png);
+		type.set ("images/formuls/formula (11).png", AssetType.IMAGE);
+		className.set ("images/formuls/formula (12).png", __ASSET__images_formuls_formula__12__png);
+		type.set ("images/formuls/formula (12).png", AssetType.IMAGE);
+		className.set ("images/formuls/formula (13).png", __ASSET__images_formuls_formula__13__png);
+		type.set ("images/formuls/formula (13).png", AssetType.IMAGE);
+		className.set ("images/formuls/formula (14).png", __ASSET__images_formuls_formula__14__png);
+		type.set ("images/formuls/formula (14).png", AssetType.IMAGE);
+		className.set ("images/formuls/formula (15).png", __ASSET__images_formuls_formula__15__png);
+		type.set ("images/formuls/formula (15).png", AssetType.IMAGE);
+		className.set ("images/formuls/formula (2).png", __ASSET__images_formuls_formula__2__png);
+		type.set ("images/formuls/formula (2).png", AssetType.IMAGE);
+		className.set ("images/formuls/formula (3).png", __ASSET__images_formuls_formula__3__png);
+		type.set ("images/formuls/formula (3).png", AssetType.IMAGE);
+		className.set ("images/formuls/formula (4).png", __ASSET__images_formuls_formula__4__png);
+		type.set ("images/formuls/formula (4).png", AssetType.IMAGE);
+		className.set ("images/formuls/formula (5).png", __ASSET__images_formuls_formula__5__png);
+		type.set ("images/formuls/formula (5).png", AssetType.IMAGE);
+		className.set ("images/formuls/formula (6).png", __ASSET__images_formuls_formula__6__png);
+		type.set ("images/formuls/formula (6).png", AssetType.IMAGE);
+		className.set ("images/formuls/formula (7).png", __ASSET__images_formuls_formula__7__png);
+		type.set ("images/formuls/formula (7).png", AssetType.IMAGE);
+		className.set ("images/formuls/formula (8).png", __ASSET__images_formuls_formula__8__png);
+		type.set ("images/formuls/formula (8).png", AssetType.IMAGE);
+		className.set ("images/formuls/formula (9).png", __ASSET__images_formuls_formula__9__png);
+		type.set ("images/formuls/formula (9).png", AssetType.IMAGE);
+		className.set ("images/triangle.png", __ASSET__images_triangle_png);
+		type.set ("images/triangle.png", AssetType.IMAGE);
 		className.set ("styles/labels.css", __ASSET__styles_labels_css);
 		type.set ("styles/labels.css", AssetType.TEXT);
 		className.set ("styles/labels.min.css", __ASSET__styles_labels_min_css);
@@ -83,6 +115,70 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "images/formuls/formula (1).png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/formuls/formula (10).png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/formuls/formula (11).png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/formuls/formula (12).png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/formuls/formula (13).png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/formuls/formula (14).png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/formuls/formula (15).png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/formuls/formula (2).png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/formuls/formula (3).png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/formuls/formula (4).png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/formuls/formula (5).png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/formuls/formula (6).png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/formuls/formula (7).png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/formuls/formula (8).png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/formuls/formula (9).png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/triangle.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "styles/labels.css";
 		path.set (id, id);
 		
@@ -98,6 +194,22 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if openfl
 		
 		openfl.text.Font.registerFont (__ASSET__fonts_russoone_ttf);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -125,6 +237,54 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("images/buttonNextUp.png", __ASSET__images_buttonnextup_png);
 		type.set ("images/buttonNextUp.png", AssetType.IMAGE);
+		
+		className.set ("images/formuls/formula (1).png", __ASSET__images_formuls_formula__1__png);
+		type.set ("images/formuls/formula (1).png", AssetType.IMAGE);
+		
+		className.set ("images/formuls/formula (10).png", __ASSET__images_formuls_formula__10__png);
+		type.set ("images/formuls/formula (10).png", AssetType.IMAGE);
+		
+		className.set ("images/formuls/formula (11).png", __ASSET__images_formuls_formula__11__png);
+		type.set ("images/formuls/formula (11).png", AssetType.IMAGE);
+		
+		className.set ("images/formuls/formula (12).png", __ASSET__images_formuls_formula__12__png);
+		type.set ("images/formuls/formula (12).png", AssetType.IMAGE);
+		
+		className.set ("images/formuls/formula (13).png", __ASSET__images_formuls_formula__13__png);
+		type.set ("images/formuls/formula (13).png", AssetType.IMAGE);
+		
+		className.set ("images/formuls/formula (14).png", __ASSET__images_formuls_formula__14__png);
+		type.set ("images/formuls/formula (14).png", AssetType.IMAGE);
+		
+		className.set ("images/formuls/formula (15).png", __ASSET__images_formuls_formula__15__png);
+		type.set ("images/formuls/formula (15).png", AssetType.IMAGE);
+		
+		className.set ("images/formuls/formula (2).png", __ASSET__images_formuls_formula__2__png);
+		type.set ("images/formuls/formula (2).png", AssetType.IMAGE);
+		
+		className.set ("images/formuls/formula (3).png", __ASSET__images_formuls_formula__3__png);
+		type.set ("images/formuls/formula (3).png", AssetType.IMAGE);
+		
+		className.set ("images/formuls/formula (4).png", __ASSET__images_formuls_formula__4__png);
+		type.set ("images/formuls/formula (4).png", AssetType.IMAGE);
+		
+		className.set ("images/formuls/formula (5).png", __ASSET__images_formuls_formula__5__png);
+		type.set ("images/formuls/formula (5).png", AssetType.IMAGE);
+		
+		className.set ("images/formuls/formula (6).png", __ASSET__images_formuls_formula__6__png);
+		type.set ("images/formuls/formula (6).png", AssetType.IMAGE);
+		
+		className.set ("images/formuls/formula (7).png", __ASSET__images_formuls_formula__7__png);
+		type.set ("images/formuls/formula (7).png", AssetType.IMAGE);
+		
+		className.set ("images/formuls/formula (8).png", __ASSET__images_formuls_formula__8__png);
+		type.set ("images/formuls/formula (8).png", AssetType.IMAGE);
+		
+		className.set ("images/formuls/formula (9).png", __ASSET__images_formuls_formula__9__png);
+		type.set ("images/formuls/formula (9).png", AssetType.IMAGE);
+		
+		className.set ("images/triangle.png", __ASSET__images_triangle_png);
+		type.set ("images/triangle.png", AssetType.IMAGE);
 		
 		className.set ("styles/labels.css", __ASSET__styles_labels_css);
 		type.set ("styles/labels.css", AssetType.TEXT);
@@ -710,6 +870,22 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__images_buttonnexthover_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__images_buttonnextpress_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__images_buttonnextup_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_formuls_formula__1__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_formuls_formula__10__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_formuls_formula__11__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_formuls_formula__12__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_formuls_formula__13__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_formuls_formula__14__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_formuls_formula__15__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_formuls_formula__2__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_formuls_formula__3__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_formuls_formula__4__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_formuls_formula__5__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_formuls_formula__6__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_formuls_formula__7__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_formuls_formula__8__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_formuls_formula__9__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_triangle_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__styles_labels_css extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__styles_labels_min_css extends flash.utils.ByteArray { }
 
@@ -718,6 +894,22 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 #if openfl
 @:keep #if display private #end class __ASSET__fonts_russoone_ttf extends openfl.text.Font { public function new () { super (); fontName = "Russo One"; } } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -742,6 +934,22 @@ class DefaultAssetLibrary extends AssetLibrary {
 //@:bitmap("Assets/images/buttonNextHover.png") class __ASSET__images_buttonnexthover_png extends openfl.display.BitmapData {}
 //@:bitmap("Assets/images/buttonNextPress.png") class __ASSET__images_buttonnextpress_png extends openfl.display.BitmapData {}
 //@:bitmap("Assets/images/buttonNextUp.png") class __ASSET__images_buttonnextup_png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/formuls/formula (1).png") class __ASSET__images_formuls_formula__1__png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/formuls/formula (10).png") class __ASSET__images_formuls_formula__10__png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/formuls/formula (11).png") class __ASSET__images_formuls_formula__11__png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/formuls/formula (12).png") class __ASSET__images_formuls_formula__12__png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/formuls/formula (13).png") class __ASSET__images_formuls_formula__13__png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/formuls/formula (14).png") class __ASSET__images_formuls_formula__14__png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/formuls/formula (15).png") class __ASSET__images_formuls_formula__15__png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/formuls/formula (2).png") class __ASSET__images_formuls_formula__2__png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/formuls/formula (3).png") class __ASSET__images_formuls_formula__3__png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/formuls/formula (4).png") class __ASSET__images_formuls_formula__4__png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/formuls/formula (5).png") class __ASSET__images_formuls_formula__5__png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/formuls/formula (6).png") class __ASSET__images_formuls_formula__6__png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/formuls/formula (7).png") class __ASSET__images_formuls_formula__7__png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/formuls/formula (8).png") class __ASSET__images_formuls_formula__8__png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/formuls/formula (9).png") class __ASSET__images_formuls_formula__9__png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/triangle.png") class __ASSET__images_triangle_png extends openfl.display.BitmapData {}
 //@:file("Assets/styles/labels.css") class __ASSET__styles_labels_css extends lime.utils.ByteArray {}
 //@:file("Assets/styles/labels.min.css") class __ASSET__styles_labels_min_css extends lime.utils.ByteArray {}
 //

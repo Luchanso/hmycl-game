@@ -21,8 +21,7 @@ import openfl.Lib;
 import openfl.Assets;
 
 
-class AskScreen extends Sprite
-{
+class AskScreen extends Sprite {
 
 	private var inputTextWeight:TextField;
 	private var inputTextHeight:TextField;
@@ -34,13 +33,13 @@ class AskScreen extends Sprite
 	
 	private var buttonEnter:SimpleButton;
 	
-	private var callback:Dynamic;
+	private var callbackEnd:Dynamic;
 
-	public function new (callback:Dynamic) {
+	public function new (callbackEnd:Dynamic) {
 		
 		super ();
 		
-		this.callback = callback;
+		this.callbackEnd = callbackEnd;
 		initialization ();
 		
 	}
@@ -186,7 +185,7 @@ class AskScreen extends Sprite
 			
 		}
 		
-		this.callback(height, weight);
+		this.callbackEnd(height, weight);
 		
 	}
 

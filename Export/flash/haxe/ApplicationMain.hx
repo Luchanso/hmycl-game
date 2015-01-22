@@ -47,6 +47,70 @@ class ApplicationMain {
 		types.push (AssetType.IMAGE);
 		
 		
+		urls.push ("images/formuls/formula (1).png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/formuls/formula (10).png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/formuls/formula (11).png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/formuls/formula (12).png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/formuls/formula (13).png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/formuls/formula (14).png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/formuls/formula (15).png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/formuls/formula (2).png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/formuls/formula (3).png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/formuls/formula (4).png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/formuls/formula (5).png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/formuls/formula (6).png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/formuls/formula (7).png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/formuls/formula (8).png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/formuls/formula (9).png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/triangle.png");
+		types.push (AssetType.IMAGE);
+		
+		
 		urls.push ("styles/labels.css");
 		types.push (AssetType.TEXT);
 		
@@ -105,7 +169,7 @@ class ApplicationMain {
 			background: Std.int (16777215),
 			borderless: false,
 			depthBuffer: false,
-			fps: Std.int (30),
+			fps: Std.int (40),
 			fullscreen: false,
 			height: Std.int (650),
 			orientation: "",
