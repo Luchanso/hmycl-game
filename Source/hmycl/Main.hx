@@ -1,40 +1,49 @@
 package hmycl;
 
 
-import flash.display.Bitmap;
-import flash.display.BitmapData;
-import flash.display.Sprite;
-import flash.events.Event;
-import flash.events.KeyboardEvent;
-import flash.system.Capabilities;
-import flash.Lib;
+import openfl.display.Bitmap;
+import openfl.display.BitmapData;
+import openfl.events.Event;
+import openfl.events.KeyboardEvent;
+import openfl.system.Capabilities;
+import openfl.Lib;
 import openfl.Assets;
+import openfl.display.Sprite;
+import openfl.text.TextField;
+import openfl.text.TextFieldType;
+import openfl.text.TextFormat;
 
 
 class Main extends Sprite {
 	
-	private var Background:Bitmap;	
+	private var background:Bitmap;	
+	private var askScreen:AskScreen;
+	//private var countScreen:CountScreen;
 	
 	public function new () {
 		
 		super ();
 		
-		load();
-		initialization();
+		load ();
+		initialization ();
 		
 	}
 	
 	private function load ():Void {
 		
-		Background = new Bitmap(Assets.getBitmapData("images/background.png"));
+		background = new Bitmap (Assets.getBitmapData ("images/background.png"));
+		askScreen = new AskScreen (this.askScreenFinish);
 		
 	}
 	
 	private function initialization ():Void	{
 		
-		addChild(Background);
+		addChild(background);
+		addChild(askScreen);
 		
 	}
 	
-
+	private function askScreenFinish ():Void {
+		//this.removeChild(askScreen);
+	}
 }

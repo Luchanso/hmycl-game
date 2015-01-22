@@ -13,6 +13,7 @@
 	
 	<assets path="Assets/fonts" rename="fonts" include="*.ttf" />
 	<assets path="Assets/images" rename="images" include="*" />
+	<assets path="Assets/styles" rename="styles" include="*.css" />
 	
 	<icon path="Assets/images/icon.svg" />
 	

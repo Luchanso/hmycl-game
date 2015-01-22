@@ -39,6 +39,14 @@ class ApplicationMain {
 		types.push (AssetType.IMAGE);
 		
 		
+		urls.push ("styles/labels.css");
+		types.push (AssetType.TEXT);
+		
+		
+		urls.push ("styles/labels.min.css");
+		types.push (AssetType.TEXT);
+		
+		
 		
 		preloader.load (urls, types);
 		#end

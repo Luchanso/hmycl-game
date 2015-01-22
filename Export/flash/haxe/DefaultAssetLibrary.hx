@@ -44,19 +44,23 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
-		className.set ("fonts/Russo_One.ttf", __ASSET__fonts_russo_one_ttf);
-		type.set ("fonts/Russo_One.ttf", AssetType.FONT);
+		className.set ("fonts/RussoOne.ttf", __ASSET__fonts_russoone_ttf);
+		type.set ("fonts/RussoOne.ttf", AssetType.FONT);
 		className.set ("images/background.jpg", __ASSET__images_background_jpg);
 		type.set ("images/background.jpg", AssetType.IMAGE);
 		className.set ("images/background.png", __ASSET__images_background_png);
 		type.set ("images/background.png", AssetType.IMAGE);
+		className.set ("styles/labels.css", __ASSET__styles_labels_css);
+		type.set ("styles/labels.css", AssetType.TEXT);
+		className.set ("styles/labels.min.css", __ASSET__styles_labels_min_css);
+		type.set ("styles/labels.min.css", AssetType.TEXT);
 		
 		
 		#elseif html5
 		
 		var id;
-		id = "fonts/Russo_One.ttf";
-		className.set (id, __ASSET__fonts_russo_one_ttf);
+		id = "fonts/RussoOne.ttf";
+		className.set (id, __ASSET__fonts_russoone_ttf);
 		
 		type.set (id, AssetType.FONT);
 		id = "images/background.jpg";
@@ -67,13 +71,23 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "styles/labels.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "styles/labels.min.css";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
 		
 		
 		#else
 		
 		#if openfl
 		
-		openfl.text.Font.registerFont (__ASSET__fonts_russo_one_ttf);
+		openfl.text.Font.registerFont (__ASSET__fonts_russoone_ttf);
+		
+		
 		
 		
 		
@@ -83,14 +97,20 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		/*var useManifest = false;
 		
-		className.set ("fonts/Russo_One.ttf", __ASSET__fonts_russo_one_ttf);
-		type.set ("fonts/Russo_One.ttf", AssetType.FONT);
+		className.set ("fonts/RussoOne.ttf", __ASSET__fonts_russoone_ttf);
+		type.set ("fonts/RussoOne.ttf", AssetType.FONT);
 		
 		className.set ("images/background.jpg", __ASSET__images_background_jpg);
 		type.set ("images/background.jpg", AssetType.IMAGE);
 		
 		className.set ("images/background.png", __ASSET__images_background_png);
 		type.set ("images/background.png", AssetType.IMAGE);
+		
+		className.set ("styles/labels.css", __ASSET__styles_labels_css);
+		type.set ("styles/labels.css", AssetType.TEXT);
+		
+		className.set ("styles/labels.min.css", __ASSET__styles_labels_min_css);
+		type.set ("styles/labels.min.css", AssetType.TEXT);
 		*/
 		var useManifest = true;
 		
@@ -665,15 +685,19 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if !display
 #if flash
 
-@:keep @:bind #if display private #end class __ASSET__fonts_russo_one_ttf extends flash.text.Font { }
+@:keep @:bind #if display private #end class __ASSET__fonts_russoone_ttf extends flash.text.Font { }
 @:keep @:bind #if display private #end class __ASSET__images_background_jpg extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__images_background_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__styles_labels_css extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__styles_labels_min_css extends flash.utils.ByteArray { }
 
 
 #elseif html5
 
 #if openfl
-@:keep #if display private #end class __ASSET__fonts_russo_one_ttf extends openfl.text.Font { public function new () { super (); fontName = "Russo One"; } } 
+@:keep #if display private #end class __ASSET__fonts_russoone_ttf extends openfl.text.Font { public function new () { super (); fontName = "Russo One"; } } 
+
+
 
 
 
@@ -682,16 +706,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 #else
 
 #if openfl
-@:keep class __ASSET__fonts_russo_one_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/Russo_One.ttf"; fontName = "Russo One"; }}
+@:keep class __ASSET__fonts_russoone_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/RussoOne.ttf"; fontName = "Russo One"; }}
 
 #end
 
 #if (windows || mac || linux)
 
 //
-//@:font("Assets/fonts/Russo_One.ttf") class __ASSET__fonts_russo_one_ttf extends openfl.text.Font {}
+//@:font("Assets/fonts/RussoOne.ttf") class __ASSET__fonts_russoone_ttf extends openfl.text.Font {}
 //@:bitmap("Assets/images/background.jpg") class __ASSET__images_background_jpg extends openfl.display.BitmapData {}
 //@:bitmap("Assets/images/background.png") class __ASSET__images_background_png extends openfl.display.BitmapData {}
+//@:file("Assets/styles/labels.css") class __ASSET__styles_labels_css extends lime.utils.ByteArray {}
+//@:file("Assets/styles/labels.min.css") class __ASSET__styles_labels_min_css extends lime.utils.ByteArray {}
 //
 //
 
