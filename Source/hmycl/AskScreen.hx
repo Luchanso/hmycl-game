@@ -13,6 +13,7 @@ import openfl.filters.GlowFilter;
 import openfl.geom.Point;
 import openfl.media.Sound;
 import openfl.text.TextField;
+import openfl.text.TextFieldAutoSize;
 import openfl.text.TextFieldType;
 import openfl.text.TextFormat;
 import openfl.text.TextFormatAlign;
@@ -29,6 +30,10 @@ class AskScreen extends Sprite
 	private var labelWeightUnits:TextField;
 	private var labelHeight:TextField;
 	private var labelHeightUnits:TextField;
+	private var errorLabel:TextField;
+	
+	private var buttonEnter:SimpleButton;
+	
 	private var callback:Dynamic;
 
 	public function new (callback:Dynamic) {
@@ -123,24 +128,79 @@ class AskScreen extends Sprite
 		addChild(inputTextHeight);
 		//} endregion
 		
-		var bmpButtonPress = new Bitmap(Assets.getBitmapData("images/buttonNextPress.png"));
-		var bmpButtonHover = new Bitmap(Assets.getBitmapData("images/buttonNextHover.png"));
-		var bmpButtonUp = new Bitmap(Assets.getBitmapData("images/buttonNextUp.png"));
+		//{ region button
 		
-		var buttonEnter = new SimpleButton(bmpButtonUp, bmpButtonHover, bmpButtonPress, bmpButtonUp);
+		var bmpButtonPress = new Bitmap (Assets.getBitmapData ("images/buttonNextPress.png"));
+		var bmpButtonHover = new Bitmap (Assets.getBitmapData ("images/buttonNextHover.png"));
+		var bmpButtonUp = new Bitmap (Assets.getBitmapData ("images/buttonNextUp.png"));
+		
+		buttonEnter = new SimpleButton (bmpButtonUp, bmpButtonHover, bmpButtonPress, bmpButtonUp);
 		buttonEnter.x = offsetX;
 		buttonEnter.y = inputTextHeight.height + inputTextHeight.y + 50;
 		buttonEnter.filters = [shadow];
-		buttonEnter.addEventListener(MouseEvent.CLICK, buttonEnterPress);
+		buttonEnter.addEventListener (MouseEvent.CLICK, buttonEnterPress);
 		
-		addChild(buttonEnter);
+		addChild (buttonEnter);
+		
+		//} endregion
+		
+		var errorFormat = new TextFormat("Arial", 16, 0xFF6464, true);		
+		
+		errorLabel = new TextField();
+		errorLabel.defaultTextFormat = errorFormat;
+		errorLabel.text = "Ошибка";
+		errorLabel.x = offsetX + 100;
+		errorLabel.y = inputTextWeight.y + inputTextWeight.height + 35;
+		errorLabel.visible = true;		
+		errorLabel.filters = [shadow];
+		errorLabel.autoSize = TextFieldAutoSize.CENTER;
+		errorLabel.selectable = false;
+		errorLabel.visible = false;
+		
+		addChild (errorLabel);
 	}
 	
-	private function buttonEnterPress (e:Event):Void {		
+	private function buttonEnterPress (e:Event):Void {
 		
-		this.callback(Std.parseInt(this.inputTextHeight.text), Std.parseInt(this.inputTextWeight.text));		
+		if (this.inputTextHeight.text == "" || this.inputTextWeight.text == "") {
+			
+			errorLabel.visible = true;
+			errorLabel.text = "Все поля должны быть заполнены";
+			return;
+			
+		}
+		
+		var height = Std.parseInt (this.inputTextHeight.text);
+		var weight = Std.parseInt (this.inputTextWeight.text);
+		
+		if (height < 30 || height > 275) {
+			
+			erorrHeight ();
+			return;
+			
+		}
+		if (weight < 2 || weight > 750) {
+			
+			erorrWeight ();			
+			return;
+			
+		}
+		
+		this.callback(height, weight);
 		
 	}
 
+	private function erorrHeight ():Void {
+		
+		errorLabel.visible = true;
+		errorLabel.text = "Неправильно указан рост - он должен быть в пределах от 30 до 275 см.";
+		
+	}
 	
+	private function erorrWeight ():Void {
+		
+		errorLabel.visible = true;
+		errorLabel.text = "Неправильно указан вес - он должен быть в пределах от 2 до 750 кг.";
+		
+	}
 }
