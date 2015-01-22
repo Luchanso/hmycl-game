@@ -31,11 +31,19 @@ class ApplicationMain {
 		types.push (AssetType.FONT);
 		
 		
-		urls.push ("images/background.jpg");
+		urls.push ("images/background.png");
 		types.push (AssetType.IMAGE);
 		
 		
-		urls.push ("images/background.png");
+		urls.push ("images/buttonNextHover.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/buttonNextPress.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/buttonNextUp.png");
 		types.push (AssetType.IMAGE);
 		
 		

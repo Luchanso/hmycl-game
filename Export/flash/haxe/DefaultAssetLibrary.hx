@@ -46,10 +46,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("fonts/RussoOne.ttf", __ASSET__fonts_russoone_ttf);
 		type.set ("fonts/RussoOne.ttf", AssetType.FONT);
-		className.set ("images/background.jpg", __ASSET__images_background_jpg);
-		type.set ("images/background.jpg", AssetType.IMAGE);
 		className.set ("images/background.png", __ASSET__images_background_png);
 		type.set ("images/background.png", AssetType.IMAGE);
+		className.set ("images/buttonNextHover.png", __ASSET__images_buttonnexthover_png);
+		type.set ("images/buttonNextHover.png", AssetType.IMAGE);
+		className.set ("images/buttonNextPress.png", __ASSET__images_buttonnextpress_png);
+		type.set ("images/buttonNextPress.png", AssetType.IMAGE);
+		className.set ("images/buttonNextUp.png", __ASSET__images_buttonnextup_png);
+		type.set ("images/buttonNextUp.png", AssetType.IMAGE);
 		className.set ("styles/labels.css", __ASSET__styles_labels_css);
 		type.set ("styles/labels.css", AssetType.TEXT);
 		className.set ("styles/labels.min.css", __ASSET__styles_labels_min_css);
@@ -63,11 +67,19 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set (id, __ASSET__fonts_russoone_ttf);
 		
 		type.set (id, AssetType.FONT);
-		id = "images/background.jpg";
+		id = "images/background.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
-		id = "images/background.png";
+		id = "images/buttonNextHover.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/buttonNextPress.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/buttonNextUp.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -91,6 +103,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
 		#end
 		
 		#if (windows || mac || linux)
@@ -100,11 +114,17 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("fonts/RussoOne.ttf", __ASSET__fonts_russoone_ttf);
 		type.set ("fonts/RussoOne.ttf", AssetType.FONT);
 		
-		className.set ("images/background.jpg", __ASSET__images_background_jpg);
-		type.set ("images/background.jpg", AssetType.IMAGE);
-		
 		className.set ("images/background.png", __ASSET__images_background_png);
 		type.set ("images/background.png", AssetType.IMAGE);
+		
+		className.set ("images/buttonNextHover.png", __ASSET__images_buttonnexthover_png);
+		type.set ("images/buttonNextHover.png", AssetType.IMAGE);
+		
+		className.set ("images/buttonNextPress.png", __ASSET__images_buttonnextpress_png);
+		type.set ("images/buttonNextPress.png", AssetType.IMAGE);
+		
+		className.set ("images/buttonNextUp.png", __ASSET__images_buttonnextup_png);
+		type.set ("images/buttonNextUp.png", AssetType.IMAGE);
 		
 		className.set ("styles/labels.css", __ASSET__styles_labels_css);
 		type.set ("styles/labels.css", AssetType.TEXT);
@@ -686,8 +706,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if flash
 
 @:keep @:bind #if display private #end class __ASSET__fonts_russoone_ttf extends flash.text.Font { }
-@:keep @:bind #if display private #end class __ASSET__images_background_jpg extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__images_background_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_buttonnexthover_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_buttonnextpress_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_buttonnextup_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__styles_labels_css extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__styles_labels_min_css extends flash.utils.ByteArray { }
 
@@ -696,6 +718,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 #if openfl
 @:keep #if display private #end class __ASSET__fonts_russoone_ttf extends openfl.text.Font { public function new () { super (); fontName = "Russo One"; } } 
+
+
 
 
 
@@ -714,8 +738,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 //
 //@:font("Assets/fonts/RussoOne.ttf") class __ASSET__fonts_russoone_ttf extends openfl.text.Font {}
-//@:bitmap("Assets/images/background.jpg") class __ASSET__images_background_jpg extends openfl.display.BitmapData {}
 //@:bitmap("Assets/images/background.png") class __ASSET__images_background_png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/buttonNextHover.png") class __ASSET__images_buttonnexthover_png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/buttonNextPress.png") class __ASSET__images_buttonnextpress_png extends openfl.display.BitmapData {}
+//@:bitmap("Assets/images/buttonNextUp.png") class __ASSET__images_buttonnextup_png extends openfl.display.BitmapData {}
 //@:file("Assets/styles/labels.css") class __ASSET__styles_labels_css extends lime.utils.ByteArray {}
 //@:file("Assets/styles/labels.min.css") class __ASSET__styles_labels_min_css extends lime.utils.ByteArray {}
 //

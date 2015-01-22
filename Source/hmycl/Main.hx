@@ -43,7 +43,7 @@ class Main extends Sprite {
 		
 	}
 	
-	private function askScreenFinish ():Void {
-		//this.removeChild(askScreen);
+	private function askScreenFinish (heigt, weight):Void {
+		this.removeChild(askScreen);
 	}
 }

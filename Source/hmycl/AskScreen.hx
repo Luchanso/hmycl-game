@@ -123,13 +123,22 @@ class AskScreen extends Sprite
 		addChild(inputTextHeight);
 		//} endregion
 		
-		var enter = new SimpleButton();
+		var bmpButtonPress = new Bitmap(Assets.getBitmapData("images/buttonNextPress.png"));
+		var bmpButtonHover = new Bitmap(Assets.getBitmapData("images/buttonNextHover.png"));
+		var bmpButtonUp = new Bitmap(Assets.getBitmapData("images/buttonNextUp.png"));
 		
+		var buttonEnter = new SimpleButton(bmpButtonUp, bmpButtonHover, bmpButtonPress, bmpButtonUp);
+		buttonEnter.x = offsetX;
+		buttonEnter.y = inputTextHeight.height + inputTextHeight.y + 50;
+		buttonEnter.filters = [shadow];
+		buttonEnter.addEventListener(MouseEvent.CLICK, buttonEnterPress);
+		
+		addChild(buttonEnter);
 	}
 	
 	private function buttonEnterPress (e:Event):Void {		
 		
-		
+		this.callback(Std.parseInt(this.inputTextHeight.text), Std.parseInt(this.inputTextWeight.text));		
 		
 	}
 
