@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="Сколько стоит твоя жизнь?" package="ru.good4dev.hmcyl" version="1.0.0" company="Good 4 Dev" />
+	<app main="hmycl.Main" path="Export" file="HowMuchCoastYourLife" />
+	
+	<window width="800" height="650" if="flash" />
+	
+	<source path="Source" />
+	
+	<haxelib name="openfl" />
+	<haxelib name="actuate" />
+	
+	<assets path="Assets/fonts" rename="fonts" include="*.ttf" />
+	<assets path="Assets/images" rename="images" include="*" />
+	
+	<icon path="Assets/images/icon.svg" />
+	
+</project>
