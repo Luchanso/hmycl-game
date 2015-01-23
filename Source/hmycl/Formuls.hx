@@ -78,12 +78,15 @@ class Formuls extends Sprite {
 		progress++;
 		status.text = "Производятся расчёты: " + Math.round(progress/2) + "%";
 		if (progress > 200) {
+			removeEventListener(Event.ENTER_FRAME, onEnterFrame);
 			this.callback();
 		}
 		
 		if (formuls.length < 100) {
 				
 			var formula = CreateFormula ();
+			if (formula == null)
+				return;
 			formuls.push (formula);
 			
 			addChild (formula.texture);
@@ -91,6 +94,9 @@ class Formuls extends Sprite {
 		}
 		
 		for (i in 0...formuls.length) {
+			
+			if (formuls[i] == null)
+				continue;
 			
 			CalculateFormula (i);
 			
@@ -104,7 +110,7 @@ class Formuls extends Sprite {
 		
 	}
 	
-	private function CheckFormula (i:Int):Bool {
+	private function CheckFormula (i:Int):Bool {		
 		
 		if (formuls[i].position.x > 800 + 250 ||
 			formuls[i].position.y > 650 + 250 ||
@@ -131,6 +137,9 @@ class Formuls extends Sprite {
 	
 	private function CreateFormula ():Formula {
 		
+		if (stage == null)
+			return null;
+		
 		var formula = new Formula( new Bitmap(bitmaps[Std.random (bitmaps.length - 1)]));
 		formula.alpha = 0.1 + Math.random () * 0.6;
 		formula.position = new Point (10 + Std.random (Math.round(stage.width)), 10 + Std.random (Math.round(stage.height)));
@@ -151,7 +160,7 @@ class Formuls extends Sprite {
 	}
 	
 	private function CalculateFormula (i:Int):Void {
-		
+			
 		var formula = formuls[i];
 		formula.position.x += formula.speedX;
 		formula.position.y += formula.speedY;
