@@ -107,7 +107,99 @@ class ApplicationMain {
 		types.push (AssetType.IMAGE);
 		
 		
+		urls.push ("images/icons/beer1.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/burger15.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/business56.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/chainsaw3.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/closed37.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/coffee119.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/convertible2.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/flower165.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/fuel14.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/joystick10.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/picturetaking.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/pizza.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/restaurant.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/ring28.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/ring5.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/rocket74.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/sea8.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/shoes13.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/smartphone24.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/smoking4.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/icons/wine56.png");
+		types.push (AssetType.IMAGE);
+		
+		
 		urls.push ("images/triangle.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/vkbtn.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/vkbtnhover.png");
 		types.push (AssetType.IMAGE);
 		
 		
@@ -182,7 +274,7 @@ class ApplicationMain {
 		}
 		
 		#if js
-		#if munit
+		#if (munit || utest)
 		flash.Lib.embed (null, 800, 650, "FFFFFF");
 		#end
 		#else

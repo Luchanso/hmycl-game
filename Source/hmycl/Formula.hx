@@ -14,7 +14,7 @@ class Formula {
 	public var speedY:Float;
 	public var texture:Bitmap;
 	
-	public function new(texture:Bitmap) 
+	public function new(texture:Bitmap)
 	{
 		this.texture = texture;		
 		

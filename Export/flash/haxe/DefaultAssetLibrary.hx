@@ -84,8 +84,54 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("images/formuls/formula (8).png", AssetType.IMAGE);
 		className.set ("images/formuls/formula (9).png", __ASSET__images_formuls_formula__9__png);
 		type.set ("images/formuls/formula (9).png", AssetType.IMAGE);
+		className.set ("images/icons/beer1.png", __ASSET__images_icons_beer1_png);
+		type.set ("images/icons/beer1.png", AssetType.IMAGE);
+		className.set ("images/icons/burger15.png", __ASSET__images_icons_burger15_png);
+		type.set ("images/icons/burger15.png", AssetType.IMAGE);
+		className.set ("images/icons/business56.png", __ASSET__images_icons_business56_png);
+		type.set ("images/icons/business56.png", AssetType.IMAGE);
+		className.set ("images/icons/chainsaw3.png", __ASSET__images_icons_chainsaw3_png);
+		type.set ("images/icons/chainsaw3.png", AssetType.IMAGE);
+		className.set ("images/icons/closed37.png", __ASSET__images_icons_closed37_png);
+		type.set ("images/icons/closed37.png", AssetType.IMAGE);
+		className.set ("images/icons/coffee119.png", __ASSET__images_icons_coffee119_png);
+		type.set ("images/icons/coffee119.png", AssetType.IMAGE);
+		className.set ("images/icons/convertible2.png", __ASSET__images_icons_convertible2_png);
+		type.set ("images/icons/convertible2.png", AssetType.IMAGE);
+		className.set ("images/icons/flower165.png", __ASSET__images_icons_flower165_png);
+		type.set ("images/icons/flower165.png", AssetType.IMAGE);
+		className.set ("images/icons/fuel14.png", __ASSET__images_icons_fuel14_png);
+		type.set ("images/icons/fuel14.png", AssetType.IMAGE);
+		className.set ("images/icons/joystick10.png", __ASSET__images_icons_joystick10_png);
+		type.set ("images/icons/joystick10.png", AssetType.IMAGE);
+		className.set ("images/icons/picturetaking.png", __ASSET__images_icons_picturetaking_png);
+		type.set ("images/icons/picturetaking.png", AssetType.IMAGE);
+		className.set ("images/icons/pizza.png", __ASSET__images_icons_pizza_png);
+		type.set ("images/icons/pizza.png", AssetType.IMAGE);
+		className.set ("images/icons/restaurant.png", __ASSET__images_icons_restaurant_png);
+		type.set ("images/icons/restaurant.png", AssetType.IMAGE);
+		className.set ("images/icons/ring28.png", __ASSET__images_icons_ring28_png);
+		type.set ("images/icons/ring28.png", AssetType.IMAGE);
+		className.set ("images/icons/ring5.png", __ASSET__images_icons_ring5_png);
+		type.set ("images/icons/ring5.png", AssetType.IMAGE);
+		className.set ("images/icons/rocket74.png", __ASSET__images_icons_rocket74_png);
+		type.set ("images/icons/rocket74.png", AssetType.IMAGE);
+		className.set ("images/icons/sea8.png", __ASSET__images_icons_sea8_png);
+		type.set ("images/icons/sea8.png", AssetType.IMAGE);
+		className.set ("images/icons/shoes13.png", __ASSET__images_icons_shoes13_png);
+		type.set ("images/icons/shoes13.png", AssetType.IMAGE);
+		className.set ("images/icons/smartphone24.png", __ASSET__images_icons_smartphone24_png);
+		type.set ("images/icons/smartphone24.png", AssetType.IMAGE);
+		className.set ("images/icons/smoking4.png", __ASSET__images_icons_smoking4_png);
+		type.set ("images/icons/smoking4.png", AssetType.IMAGE);
+		className.set ("images/icons/wine56.png", __ASSET__images_icons_wine56_png);
+		type.set ("images/icons/wine56.png", AssetType.IMAGE);
 		className.set ("images/triangle.png", __ASSET__images_triangle_png);
 		type.set ("images/triangle.png", AssetType.IMAGE);
+		className.set ("images/vkbtn.png", __ASSET__images_vkbtn_png);
+		type.set ("images/vkbtn.png", AssetType.IMAGE);
+		className.set ("images/vkbtnhover.png", __ASSET__images_vkbtnhover_png);
+		type.set ("images/vkbtnhover.png", AssetType.IMAGE);
 		className.set ("styles/labels.css", __ASSET__styles_labels_css);
 		type.set ("styles/labels.css", AssetType.TEXT);
 		className.set ("styles/labels.min.css", __ASSET__styles_labels_min_css);
@@ -175,7 +221,99 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "images/icons/beer1.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/burger15.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/business56.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/chainsaw3.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/closed37.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/coffee119.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/convertible2.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/flower165.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/fuel14.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/joystick10.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/picturetaking.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/pizza.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/restaurant.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/ring28.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/ring5.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/rocket74.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/sea8.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/shoes13.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/smartphone24.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/smoking4.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/icons/wine56.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "images/triangle.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/vkbtn.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/vkbtnhover.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -217,11 +355,34 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		#end
 		
 		#if (windows || mac || linux)
 		
-		/*var useManifest = false;
+		var useManifest = false;
 		
 		className.set ("fonts/RussoOne.ttf", __ASSET__fonts_russoone_ttf);
 		type.set ("fonts/RussoOne.ttf", AssetType.FONT);
@@ -283,16 +444,84 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("images/formuls/formula (9).png", __ASSET__images_formuls_formula__9__png);
 		type.set ("images/formuls/formula (9).png", AssetType.IMAGE);
 		
+		className.set ("images/icons/beer1.png", __ASSET__images_icons_beer1_png);
+		type.set ("images/icons/beer1.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/burger15.png", __ASSET__images_icons_burger15_png);
+		type.set ("images/icons/burger15.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/business56.png", __ASSET__images_icons_business56_png);
+		type.set ("images/icons/business56.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/chainsaw3.png", __ASSET__images_icons_chainsaw3_png);
+		type.set ("images/icons/chainsaw3.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/closed37.png", __ASSET__images_icons_closed37_png);
+		type.set ("images/icons/closed37.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/coffee119.png", __ASSET__images_icons_coffee119_png);
+		type.set ("images/icons/coffee119.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/convertible2.png", __ASSET__images_icons_convertible2_png);
+		type.set ("images/icons/convertible2.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/flower165.png", __ASSET__images_icons_flower165_png);
+		type.set ("images/icons/flower165.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/fuel14.png", __ASSET__images_icons_fuel14_png);
+		type.set ("images/icons/fuel14.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/joystick10.png", __ASSET__images_icons_joystick10_png);
+		type.set ("images/icons/joystick10.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/picturetaking.png", __ASSET__images_icons_picturetaking_png);
+		type.set ("images/icons/picturetaking.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/pizza.png", __ASSET__images_icons_pizza_png);
+		type.set ("images/icons/pizza.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/restaurant.png", __ASSET__images_icons_restaurant_png);
+		type.set ("images/icons/restaurant.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/ring28.png", __ASSET__images_icons_ring28_png);
+		type.set ("images/icons/ring28.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/ring5.png", __ASSET__images_icons_ring5_png);
+		type.set ("images/icons/ring5.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/rocket74.png", __ASSET__images_icons_rocket74_png);
+		type.set ("images/icons/rocket74.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/sea8.png", __ASSET__images_icons_sea8_png);
+		type.set ("images/icons/sea8.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/shoes13.png", __ASSET__images_icons_shoes13_png);
+		type.set ("images/icons/shoes13.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/smartphone24.png", __ASSET__images_icons_smartphone24_png);
+		type.set ("images/icons/smartphone24.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/smoking4.png", __ASSET__images_icons_smoking4_png);
+		type.set ("images/icons/smoking4.png", AssetType.IMAGE);
+		
+		className.set ("images/icons/wine56.png", __ASSET__images_icons_wine56_png);
+		type.set ("images/icons/wine56.png", AssetType.IMAGE);
+		
 		className.set ("images/triangle.png", __ASSET__images_triangle_png);
 		type.set ("images/triangle.png", AssetType.IMAGE);
+		
+		className.set ("images/vkbtn.png", __ASSET__images_vkbtn_png);
+		type.set ("images/vkbtn.png", AssetType.IMAGE);
+		
+		className.set ("images/vkbtnhover.png", __ASSET__images_vkbtnhover_png);
+		type.set ("images/vkbtnhover.png", AssetType.IMAGE);
 		
 		className.set ("styles/labels.css", __ASSET__styles_labels_css);
 		type.set ("styles/labels.css", AssetType.TEXT);
 		
 		className.set ("styles/labels.min.css", __ASSET__styles_labels_min_css);
 		type.set ("styles/labels.min.css", AssetType.TEXT);
-		*/
-		var useManifest = true;
+		
 		
 		if (useManifest) {
 			
@@ -441,10 +670,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#else
 		
-		//return null;
-		//if (className.exists(id)) return cast (Type.createInstance (className.get (id), []), ByteArray);
-		//else 
-		return ByteArray.readFile (path.get (id));
+		if (className.exists(id)) return cast (Type.createInstance (className.get (id), []), ByteArray);
+		else return ByteArray.readFile (path.get (id));
 		
 		#end
 		
@@ -885,7 +1112,30 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__images_formuls_formula__7__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__images_formuls_formula__8__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__images_formuls_formula__9__png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_beer1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_burger15_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_business56_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_chainsaw3_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_closed37_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_coffee119_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_convertible2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_flower165_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_fuel14_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_joystick10_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_picturetaking_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_pizza_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_restaurant_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_ring28_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_ring5_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_rocket74_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_sea8_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_shoes13_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_smartphone24_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_smoking4_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_icons_wine56_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__images_triangle_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_vkbtn_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_vkbtnhover_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__styles_labels_css extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__styles_labels_min_css extends flash.utils.ByteArray { }
 
@@ -894,6 +1144,29 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 #if openfl
 @:keep #if display private #end class __ASSET__fonts_russoone_ttf extends openfl.text.Font { public function new () { super (); fontName = "Russo One"; } } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -928,32 +1201,55 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 #if (windows || mac || linux)
 
-//
-//@:font("Assets/fonts/RussoOne.ttf") class __ASSET__fonts_russoone_ttf extends openfl.text.Font {}
-//@:bitmap("Assets/images/background.png") class __ASSET__images_background_png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/buttonNextHover.png") class __ASSET__images_buttonnexthover_png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/buttonNextPress.png") class __ASSET__images_buttonnextpress_png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/buttonNextUp.png") class __ASSET__images_buttonnextup_png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/formuls/formula (1).png") class __ASSET__images_formuls_formula__1__png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/formuls/formula (10).png") class __ASSET__images_formuls_formula__10__png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/formuls/formula (11).png") class __ASSET__images_formuls_formula__11__png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/formuls/formula (12).png") class __ASSET__images_formuls_formula__12__png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/formuls/formula (13).png") class __ASSET__images_formuls_formula__13__png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/formuls/formula (14).png") class __ASSET__images_formuls_formula__14__png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/formuls/formula (15).png") class __ASSET__images_formuls_formula__15__png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/formuls/formula (2).png") class __ASSET__images_formuls_formula__2__png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/formuls/formula (3).png") class __ASSET__images_formuls_formula__3__png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/formuls/formula (4).png") class __ASSET__images_formuls_formula__4__png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/formuls/formula (5).png") class __ASSET__images_formuls_formula__5__png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/formuls/formula (6).png") class __ASSET__images_formuls_formula__6__png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/formuls/formula (7).png") class __ASSET__images_formuls_formula__7__png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/formuls/formula (8).png") class __ASSET__images_formuls_formula__8__png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/formuls/formula (9).png") class __ASSET__images_formuls_formula__9__png extends openfl.display.BitmapData {}
-//@:bitmap("Assets/images/triangle.png") class __ASSET__images_triangle_png extends openfl.display.BitmapData {}
-//@:file("Assets/styles/labels.css") class __ASSET__styles_labels_css extends lime.utils.ByteArray {}
-//@:file("Assets/styles/labels.min.css") class __ASSET__styles_labels_min_css extends lime.utils.ByteArray {}
-//
-//
+
+@:font("Assets/fonts/RussoOne.ttf") class __ASSET__fonts_russoone_ttf extends lime.graphics.Font {}
+@:bitmap("Assets/images/background.png") class __ASSET__images_background_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/buttonNextHover.png") class __ASSET__images_buttonnexthover_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/buttonNextPress.png") class __ASSET__images_buttonnextpress_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/buttonNextUp.png") class __ASSET__images_buttonnextup_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/formuls/formula (1).png") class __ASSET__images_formuls_formula__1__png extends lime.graphics.Image {}
+@:bitmap("Assets/images/formuls/formula (10).png") class __ASSET__images_formuls_formula__10__png extends lime.graphics.Image {}
+@:bitmap("Assets/images/formuls/formula (11).png") class __ASSET__images_formuls_formula__11__png extends lime.graphics.Image {}
+@:bitmap("Assets/images/formuls/formula (12).png") class __ASSET__images_formuls_formula__12__png extends lime.graphics.Image {}
+@:bitmap("Assets/images/formuls/formula (13).png") class __ASSET__images_formuls_formula__13__png extends lime.graphics.Image {}
+@:bitmap("Assets/images/formuls/formula (14).png") class __ASSET__images_formuls_formula__14__png extends lime.graphics.Image {}
+@:bitmap("Assets/images/formuls/formula (15).png") class __ASSET__images_formuls_formula__15__png extends lime.graphics.Image {}
+@:bitmap("Assets/images/formuls/formula (2).png") class __ASSET__images_formuls_formula__2__png extends lime.graphics.Image {}
+@:bitmap("Assets/images/formuls/formula (3).png") class __ASSET__images_formuls_formula__3__png extends lime.graphics.Image {}
+@:bitmap("Assets/images/formuls/formula (4).png") class __ASSET__images_formuls_formula__4__png extends lime.graphics.Image {}
+@:bitmap("Assets/images/formuls/formula (5).png") class __ASSET__images_formuls_formula__5__png extends lime.graphics.Image {}
+@:bitmap("Assets/images/formuls/formula (6).png") class __ASSET__images_formuls_formula__6__png extends lime.graphics.Image {}
+@:bitmap("Assets/images/formuls/formula (7).png") class __ASSET__images_formuls_formula__7__png extends lime.graphics.Image {}
+@:bitmap("Assets/images/formuls/formula (8).png") class __ASSET__images_formuls_formula__8__png extends lime.graphics.Image {}
+@:bitmap("Assets/images/formuls/formula (9).png") class __ASSET__images_formuls_formula__9__png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/beer1.png") class __ASSET__images_icons_beer1_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/burger15.png") class __ASSET__images_icons_burger15_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/business56.png") class __ASSET__images_icons_business56_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/chainsaw3.png") class __ASSET__images_icons_chainsaw3_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/closed37.png") class __ASSET__images_icons_closed37_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/coffee119.png") class __ASSET__images_icons_coffee119_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/convertible2.png") class __ASSET__images_icons_convertible2_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/flower165.png") class __ASSET__images_icons_flower165_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/fuel14.png") class __ASSET__images_icons_fuel14_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/joystick10.png") class __ASSET__images_icons_joystick10_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/picturetaking.png") class __ASSET__images_icons_picturetaking_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/pizza.png") class __ASSET__images_icons_pizza_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/restaurant.png") class __ASSET__images_icons_restaurant_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/ring28.png") class __ASSET__images_icons_ring28_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/ring5.png") class __ASSET__images_icons_ring5_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/rocket74.png") class __ASSET__images_icons_rocket74_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/sea8.png") class __ASSET__images_icons_sea8_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/shoes13.png") class __ASSET__images_icons_shoes13_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/smartphone24.png") class __ASSET__images_icons_smartphone24_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/smoking4.png") class __ASSET__images_icons_smoking4_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/icons/wine56.png") class __ASSET__images_icons_wine56_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/triangle.png") class __ASSET__images_triangle_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/vkbtn.png") class __ASSET__images_vkbtn_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/vkbtnhover.png") class __ASSET__images_vkbtnhover_png extends lime.graphics.Image {}
+@:file("Assets/styles/labels.css") class __ASSET__styles_labels_css extends lime.utils.ByteArray {}
+@:file("Assets/styles/labels.min.css") class __ASSET__styles_labels_min_css extends lime.utils.ByteArray {}
+
+
 
 #end
 

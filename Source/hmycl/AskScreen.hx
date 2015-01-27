@@ -20,6 +20,10 @@ import openfl.text.TextFormatAlign;
 import openfl.Lib;
 import openfl.Assets;
 
+#if !flash
+import openfl.events.KeyboardEvent;
+#end
+
 
 class AskScreen extends Sprite {
 
@@ -79,7 +83,15 @@ class AskScreen extends Sprite {
 		inputTextWeight.background = true;
 		inputTextWeight.type = TextFieldType.INPUT;
 		inputTextWeight.defaultTextFormat = inputFormat;
-		inputTextWeight.restrict = "0-9";
+		#if flash
+			
+			inputTextWeight.restrict = "0-9";
+			
+		#else
+			
+			inputTextWeight.addEventListener(KeyboardEvent.KEY_DOWN, expression);
+			
+		#end
 		
 		labelWeightUnits = new TextField ();
 		labelWeightUnits.defaultTextFormat = labelFormat;
@@ -108,7 +120,15 @@ class AskScreen extends Sprite {
 		inputTextHeight.background = true;
 		inputTextHeight.type = TextFieldType.INPUT;
 		inputTextHeight.defaultTextFormat = inputFormat;
-		inputTextHeight.restrict = "0-9";
+		#if flash
+		
+			inputTextHeight.restrict = "0-9";
+			
+		#else
+			
+			inputTextHeight.addEventListener(KeyboardEvent.KEY_DOWN, expression);
+			
+		#end
 		
 		labelHeightUnits = new TextField ();
 		labelHeightUnits.defaultTextFormat = labelFormat;
@@ -158,6 +178,13 @@ class AskScreen extends Sprite {
 		
 		addChild (errorLabel);
 	}
+	
+	#if !flash
+	private function expression(e:KeyboardEvent):Void {
+		if ((e.keyCode < 48 || e.keyCode > 57) && (e.keyCode != 8))
+			e.stopImmediatePropagation();		
+	}
+	#end
 	
 	private function buttonEnterPress (e:Event):Void {
 		

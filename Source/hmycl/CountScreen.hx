@@ -24,7 +24,7 @@ class CountScreen extends Sprite {
 	private function load ():Void {
 		
 		background = new DrunkBackground();
-		background.texture = Assets.getBitmapData ("images/triangle.png");
+		background.texture = Assets.getBitmapData ("images/triangle.png");		
 		
 	}
 	
