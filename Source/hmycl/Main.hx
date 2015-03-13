@@ -2,16 +2,24 @@ package hmycl;
 
 
 import haxe.Json;
+import haxe.macro.Compiler;
 import openfl.display.Bitmap;
 import openfl.display.BitmapData;
+import openfl.display.Loader;
 import openfl.display.SimpleButton;
 import openfl.events.Event;
 import openfl.events.KeyboardEvent;
 import openfl.events.MouseEvent;
+import openfl.net.URLLoader;
+import openfl.net.URLRequest;
+import openfl.system.ApplicationDomain;
 import openfl.system.Capabilities;
 import openfl.Lib;
 import openfl.Assets;
 import openfl.display.Sprite;
+import openfl.system.LoaderContext;
+import openfl.system.Security;
+import openfl.system.SecurityDomain;
 import openfl.text.TextField;
 import openfl.text.TextFieldAutoSize;
 import openfl.text.TextFieldType;
@@ -28,6 +36,9 @@ import openfl.utils.Object;
 import vk.api.Client;
 import vk.events.CustomEvent;
 import vk.Vk;
+//import com.vk.MainVKBanner;
+//import com.vk.MainVKBannerEvent;
+//import com.vk.vo.BannersPanelVO;
 #end
 
 class Main extends Sprite {
@@ -43,14 +54,27 @@ class Main extends Sprite {
 	private var btnvk:SimpleButton;
 	private var textLoad:TextField;
 	private var textLoadComplete:TextField;
+	
+	private static inline var adUnitId = "50847";
+	
+	private var mainVKBanner: Dynamic;
+	private var loader : Loader;
+	private var flashVars : Dynamic;
 	#end
 	
 	public function new () {
 		
-		super ();		
+		super ();
 		
 		#if flash
-		var flashVars = this.stage.loaderInfo.parameters;
+
+		flashVars = this.stage.loaderInfo.parameters;
+		
+		loader = new Loader();
+		var context = new LoaderContext(false, ApplicationDomain.currentDomain);
+		context.securityDomain = SecurityDomain.currentDomain;
+		loader.load(new URLRequest('//api.vk.com/swf/vk_ads.swf'), context);
+		loader.contentLoaderInfo.addEventListener(Event.COMPLETE, loader_onLoadComplete);	
 		
 		if (flashVars.api_id != null)
 		{
@@ -67,6 +91,61 @@ class Main extends Sprite {
 		load ();
 		initialization ();
 		
+	}
+	
+	private function test(e:Event):Void 
+	{
+		trace(e);
+	}
+	
+	private function loader_onLoadComplete(e:Event):Void 
+	{
+		trace('Loader complete');
+		mainVKBanner = new com.vk.MainVKBanner(Settings.ADS_BOTTOM);
+		
+		trace('mainVKBanner created');
+		
+		var params = new com.vk.vo.BannersPanelVO(); // создание класса параметров баннера
+		// изменение стандартных параметров:
+		params.demo = Settings.ADS_TEST; // показывает тестовые баннеры
+		
+		// вертикальный (AD_TYPE_VERTICAL) или горизонтальный (AD_TYPE_HORIZONTAL) блок баннеров
+		params.ad_type = com.vk.vo.BannersPanelVO.AD_TYPE_HORIZONTAL; 
+		params.ad_height = 0;
+		params.ad_width = 800;	
+		// Вертикальный (AD_UNIT_TYPE_VERTICAL) или горизонтальный (AD_UNIT_TYPE_HORIZONTAL) баннер внутри блока баннеров
+		params.ad_unit_type = com.vk.vo.BannersPanelVO.AD_UNIT_TYPE_VERTICAL;		
+		params.ads_count = Settings.ADS_BOTTOM_COUNT;
+		
+		trace('Adding listeners');
+		
+		mainVKBanner.addEventListener(com.vk.MainVKBannerEvent.LOAD_COMPLETE, banner_onLoad);
+		mainVKBanner.addEventListener(com.vk.MainVKBannerEvent.LOAD_IS_EMPTY, banner_onAdsEmpty);
+		mainVKBanner.addEventListener(com.vk.MainVKBannerEvent.LOAD_ERROR, banner_onError);
+		
+		mainVKBanner.initBanner(flashVars, params);
+
+		
+		//addChild(mainVKBanner);
+		mainVKBanner.x = 0;
+		mainVKBanner.y = 650;
+		addChild(mainVKBanner);
+		trace('Added listeners');
+	}
+	
+	private function banner_onError(e:Event):Void 
+	{
+		trace('error');
+	}
+	
+	private function banner_onAdsEmpty(e:Event):Void 
+	{
+		trace('onAdsEmpry');
+	}
+	
+	private function banner_onLoad(e:Event):Void 
+	{
+		trace('Complete Ads');
 	}
 	
 	private function load ():Void {
@@ -133,10 +212,11 @@ class Main extends Sprite {
 	}
 	
 	private function startLoad(_):Void {
-		removeChild(btnvk);		
+		removeChild(btnvk);
 		
-		var test = new BitmapData(Math.round(this.stage.width), Math.round(this.stage.height));
-		test.draw(this);
+		var test = new BitmapData(Math.round(this.stage.width), Math.round(this.stage.height));		
+		test.draw(background);
+		test.draw(resultScreen);
 		
 		var temp = new TextFormat("Arial", 30, 0xFFFFFF);
 		textLoad = new TextField();
@@ -151,8 +231,8 @@ class Main extends Sprite {
 		var byteArray:ByteArray = test.encode ( new Rectangle(0, 0, test.width, test.height), new PNGEncoderOptions(false));
 		
 		if (vk != null)
-		{						
-			vk.uploadWallPhoto(byteArray, {  }, complete, error);			
+		{
+			vk.uploadWallPhoto(byteArray, {  }, complete, error);		
 		}		
 	}
 	#end
@@ -160,7 +240,8 @@ class Main extends Sprite {
 	private function askScreenFinish (heigt, weight):Void {
 		
 		removeChild(askScreen);
-		addChild(countScreen);
+		addChildAt(countScreen, 1);
+		countScreen.ads_init(flashVars);
 		
 		this.count = (((height * c * c) * 1 / 3600) / 1000) * 4.312341325 * (weight % 100 + 100);
 	}
@@ -172,16 +253,15 @@ class Main extends Sprite {
 		addChild(resultScreen);
 		
 		#if flash
-		var btn = new Bitmap(Assets.getBitmapData("images/vkbtn.png"));
+		/*var btn = new Bitmap(Assets.getBitmapData("images/vkbtn.png"));
 		var btnhover = new Bitmap(Assets.getBitmapData("images/vkbtnhover.png"));
-		
 		
 		btnvk = new SimpleButton(btn, btnhover, btnhover, btn);
 		btnvk.x = 320;
 		btnvk.y = 600;
 		btnvk.addEventListener(MouseEvent.CLICK, startLoad);
 		
-		addChild(btnvk);
+		addChild(btnvk);*/
 		#end
 	}
 }

@@ -79,10 +79,18 @@ class Formuls extends Sprite {
 		status.text = "Производятся расчёты: " + Math.round(progress/2) + "%";
 		if (progress > 200) {
 			removeEventListener(Event.ENTER_FRAME, onEnterFrame);
+			
+			status.text = "Расчёты выполнены!";
+			
+			for (i in 0...formuls.length)
+			{
+				DeleteFormula(i);
+			}
+			
 			this.callback();
 		}
 		
-		if (formuls.length < 100) {
+		if (formuls.length < 80) {
 				
 			var formula = CreateFormula ();
 			if (formula == null)

@@ -46,6 +46,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("fonts/RussoOne.ttf", __ASSET__fonts_russoone_ttf);
 		type.set ("fonts/RussoOne.ttf", AssetType.FONT);
+		className.set ("fonts/Russo_One.ttf", __ASSET__fonts_russo_one_ttf);
+		type.set ("fonts/Russo_One.ttf", AssetType.FONT);
+		className.set ("images/background.jpg", __ASSET__images_background_jpg);
+		type.set ("images/background.jpg", AssetType.IMAGE);
 		className.set ("images/background.png", __ASSET__images_background_png);
 		type.set ("images/background.png", AssetType.IMAGE);
 		className.set ("images/buttonNextHover.png", __ASSET__images_buttonnexthover_png);
@@ -132,6 +136,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("images/vkbtn.png", AssetType.IMAGE);
 		className.set ("images/vkbtnhover.png", __ASSET__images_vkbtnhover_png);
 		type.set ("images/vkbtnhover.png", AssetType.IMAGE);
+		className.set ("images/vkbtnpub.png", __ASSET__images_vkbtnpub_png);
+		type.set ("images/vkbtnpub.png", AssetType.IMAGE);
+		className.set ("images/vkbtnpubhover.png", __ASSET__images_vkbtnpubhover_png);
+		type.set ("images/vkbtnpubhover.png", AssetType.IMAGE);
 		className.set ("styles/labels.css", __ASSET__styles_labels_css);
 		type.set ("styles/labels.css", AssetType.TEXT);
 		className.set ("styles/labels.min.css", __ASSET__styles_labels_min_css);
@@ -145,6 +153,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set (id, __ASSET__fonts_russoone_ttf);
 		
 		type.set (id, AssetType.FONT);
+		id = "fonts/Russo_One.ttf";
+		className.set (id, __ASSET__fonts_russo_one_ttf);
+		
+		type.set (id, AssetType.FONT);
+		id = "images/background.jpg";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "images/background.png";
 		path.set (id, id);
 		
@@ -317,6 +333,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "images/vkbtnpub.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "images/vkbtnpubhover.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "styles/labels.css";
 		path.set (id, id);
 		
@@ -327,11 +351,22 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set (id, AssetType.TEXT);
 		
 		
+		var assetsPrefix = ApplicationMain.config.assetsPrefix;
+		if (assetsPrefix != null) {
+			for (k in path.keys()) {
+				path.set(k, assetsPrefix + path[k]);
+			}
+		}
+		
 		#else
 		
 		#if openfl
 		
 		openfl.text.Font.registerFont (__ASSET__fonts_russoone_ttf);
+		openfl.text.Font.registerFont (__ASSET__fonts_russo_one_ttf);
+		
+		
+		
 		
 		
 		
@@ -386,6 +421,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("fonts/RussoOne.ttf", __ASSET__fonts_russoone_ttf);
 		type.set ("fonts/RussoOne.ttf", AssetType.FONT);
+		
+		className.set ("fonts/Russo_One.ttf", __ASSET__fonts_russo_one_ttf);
+		type.set ("fonts/Russo_One.ttf", AssetType.FONT);
+		
+		className.set ("images/background.jpg", __ASSET__images_background_jpg);
+		type.set ("images/background.jpg", AssetType.IMAGE);
 		
 		className.set ("images/background.png", __ASSET__images_background_png);
 		type.set ("images/background.png", AssetType.IMAGE);
@@ -515,6 +556,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("images/vkbtnhover.png", __ASSET__images_vkbtnhover_png);
 		type.set ("images/vkbtnhover.png", AssetType.IMAGE);
+		
+		className.set ("images/vkbtnpub.png", __ASSET__images_vkbtnpub_png);
+		type.set ("images/vkbtnpub.png", AssetType.IMAGE);
+		
+		className.set ("images/vkbtnpubhover.png", __ASSET__images_vkbtnpubhover_png);
+		type.set ("images/vkbtnpubhover.png", AssetType.IMAGE);
 		
 		className.set ("styles/labels.css", __ASSET__styles_labels_css);
 		type.set ("styles/labels.css", AssetType.TEXT);
@@ -864,26 +911,24 @@ class DefaultAssetLibrary extends AssetLibrary {
 	
 	public override function loadAudioBuffer (id:String, handler:AudioBuffer -> Void):Void {
 		
-		#if (flash || js)
-		
-		//if (path.exists (id)) {
+		#if (flash)
+		if (path.exists (id)) {
 			
-		//	var loader = new Loader ();
-		//	loader.contentLoaderInfo.addEventListener (Event.COMPLETE, function (event) {
+			var soundLoader = new Sound ();
+			soundLoader.addEventListener (Event.COMPLETE, function (event) {
 				
-		//		handler (cast (event.currentTarget.content, Bitmap).bitmapData);
+				var audioBuffer:AudioBuffer = new AudioBuffer();
+				audioBuffer.src = event.currentTarget;
+				handler (audioBuffer);
 				
-		//	});
-		//	loader.load (new URLRequest (path.get (id)));
+			});
+			soundLoader.load (new URLRequest (path.get (id)));
 			
-		//} else {
-			
+		} else {
 			handler (getAudioBuffer (id));
 			
-		//}
-		
+		}
 		#else
-		
 		handler (getAudioBuffer (id));
 		
 		#end
@@ -1093,6 +1138,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if flash
 
 @:keep @:bind #if display private #end class __ASSET__fonts_russoone_ttf extends flash.text.Font { }
+@:keep @:bind #if display private #end class __ASSET__fonts_russo_one_ttf extends flash.text.Font { }
+@:keep @:bind #if display private #end class __ASSET__images_background_jpg extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__images_background_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__images_buttonnexthover_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__images_buttonnextpress_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -1136,6 +1183,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__images_triangle_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__images_vkbtn_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__images_vkbtnhover_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_vkbtnpub_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__images_vkbtnpubhover_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__styles_labels_css extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__styles_labels_min_css extends flash.utils.ByteArray { }
 
@@ -1144,6 +1193,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 #if openfl
 @:keep #if display private #end class __ASSET__fonts_russoone_ttf extends openfl.text.Font { public function new () { super (); fontName = "Russo One"; } } 
+@:keep #if display private #end class __ASSET__fonts_russo_one_ttf extends openfl.text.Font { public function new () { super (); fontName = "Russo One"; } } 
+
+
+
 
 
 
@@ -1196,6 +1249,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 #if openfl
 @:keep class __ASSET__fonts_russoone_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/RussoOne.ttf"; fontName = "Russo One"; }}
+@:keep class __ASSET__fonts_russo_one_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "fonts/Russo_One.ttf"; fontName = "Russo One"; }}
 
 #end
 
@@ -1203,6 +1257,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 @:font("Assets/fonts/RussoOne.ttf") class __ASSET__fonts_russoone_ttf extends lime.graphics.Font {}
+@:font("Assets/fonts/Russo_One.ttf") class __ASSET__fonts_russo_one_ttf extends lime.graphics.Font {}
+@:bitmap("Assets/images/background.jpg") class __ASSET__images_background_jpg extends lime.graphics.Image {}
 @:bitmap("Assets/images/background.png") class __ASSET__images_background_png extends lime.graphics.Image {}
 @:bitmap("Assets/images/buttonNextHover.png") class __ASSET__images_buttonnexthover_png extends lime.graphics.Image {}
 @:bitmap("Assets/images/buttonNextPress.png") class __ASSET__images_buttonnextpress_png extends lime.graphics.Image {}
@@ -1246,6 +1302,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:bitmap("Assets/images/triangle.png") class __ASSET__images_triangle_png extends lime.graphics.Image {}
 @:bitmap("Assets/images/vkbtn.png") class __ASSET__images_vkbtn_png extends lime.graphics.Image {}
 @:bitmap("Assets/images/vkbtnhover.png") class __ASSET__images_vkbtnhover_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/vkbtnpub.png") class __ASSET__images_vkbtnpub_png extends lime.graphics.Image {}
+@:bitmap("Assets/images/vkbtnpubhover.png") class __ASSET__images_vkbtnpubhover_png extends lime.graphics.Image {}
 @:file("Assets/styles/labels.css") class __ASSET__styles_labels_css extends lime.utils.ByteArray {}
 @:file("Assets/styles/labels.min.css") class __ASSET__styles_labels_min_css extends lime.utils.ByteArray {}
 

@@ -8,12 +8,10 @@ class ApplicationMain {
 	public static var config:lime.app.Config;
 	public static var preloader:openfl.display.Preloader;
 	
-	private static var app:lime.app.Application;
-	
 	
 	public static function create ():Void {
 		
-		app = new openfl.display.Application ();
+		var app = new openfl.display.Application ();
 		app.create (config);
 		
 		var display = new NMEPreloader ();
@@ -22,13 +20,21 @@ class ApplicationMain {
 		preloader.onComplete = init;
 		preloader.create (config);
 		
-		#if js
+		#if (js && html5)
 		var urls = [];
 		var types = [];
 		
 		
 		urls.push ("Russo One");
 		types.push (AssetType.FONT);
+		
+		
+		urls.push ("Russo One");
+		types.push (AssetType.FONT);
+		
+		
+		urls.push ("images/background.jpg");
+		types.push (AssetType.IMAGE);
 		
 		
 		urls.push ("images/background.png");
@@ -203,6 +209,14 @@ class ApplicationMain {
 		types.push (AssetType.IMAGE);
 		
 		
+		urls.push ("images/vkbtnpub.png");
+		types.push (AssetType.IMAGE);
+		
+		
+		urls.push ("images/vkbtnpubhover.png");
+		types.push (AssetType.IMAGE);
+		
+		
 		urls.push ("styles/labels.css");
 		types.push (AssetType.TEXT);
 		
@@ -212,12 +226,26 @@ class ApplicationMain {
 		
 		
 		
+		if (config.assetsPrefix != null) {
+			
+			for (i in 0...urls.length) {
+				
+				if (types[i] != AssetType.FONT) {
+					
+					urls[i] = config.assetsPrefix + urls[i];
+					
+				}
+				
+			}
+			
+		}
+		
 		preloader.load (urls, types);
 		#end
 		
 		var result = app.exec ();
 		
-		#if sys
+		#if (sys && !emscripten)
 		Sys.exit (result);
 		#end
 		
@@ -263,7 +291,7 @@ class ApplicationMain {
 			depthBuffer: false,
 			fps: Std.int (40),
 			fullscreen: false,
-			height: Std.int (650),
+			height: Std.int (835),
 			orientation: "",
 			resizable: true,
 			stencilBuffer: false,
@@ -275,7 +303,7 @@ class ApplicationMain {
 		
 		#if js
 		#if (munit || utest)
-		flash.Lib.embed (null, 800, 650, "FFFFFF");
+		flash.Lib.embed (null, 800, 835, "FFFFFF");
 		#end
 		#else
 		create ();
@@ -286,12 +314,10 @@ class ApplicationMain {
 	
 	public static function start ():Void {
 		
-		openfl.Lib.current.stage.align = openfl.display.StageAlign.TOP_LEFT;
-		openfl.Lib.current.stage.scaleMode = openfl.display.StageScaleMode.NO_SCALE;
-		
 		var hasMain = false;
+		var entryPoint = Type.resolveClass ("hmycl.Main");
 		
-		for (methodName in Type.getClassFields (hmycl.Main)) {
+		for (methodName in Type.getClassFields (entryPoint)) {
 			
 			if (methodName == "main") {
 				
@@ -304,7 +330,7 @@ class ApplicationMain {
 		
 		if (hasMain) {
 			
-			Reflect.callMethod (hmycl.Main, Reflect.field (hmycl.Main, "main"), []);
+			Reflect.callMethod (entryPoint, Reflect.field (entryPoint, "main"), []);
 			
 		} else {
 			

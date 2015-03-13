@@ -4,22 +4,25 @@
 	<meta title="Сколько стоит твоя жизнь?" package="ru.good4dev.hmcyl" version="1.0.0" company="Good 4 Dev" />
 	<app main="hmycl.Main" path="Export" file="HowMuchCoastYourLife" />
 	
-	<window width="800" height="650" background="#FFFFFF" if="flash" />
+	<window width="800" height="835" background="#FFFFFF" if="flash" />
 	
 	<source path="Source" />
 	
 	<haxelib name="openfl" />
 	<haxelib name="actuate" />
+	<haxelib name="vk-api" />	
 	
 	<assets path="Assets/fonts" rename="fonts" include="*.ttf" />
 	<assets path="Assets/images" rename="images" include="*" />
 	<assets path="Assets/styles" rename="styles" include="*.css" />
 	
 	<set name="SWF_VERSION" value="11.3" />
-	<set name="swf-lib" value="api.swf" />
+	<haxeflag name="-swf-lib-extern" value="lib/vk_ads.swc" />
+	<haxeflag name="--macro" value="patchTypes('Patch.patch')" />
 	
 	<window fps="40" />
 	
 	<icon path="Assets/images/icon.svg" />
+	
 	
 </project>
