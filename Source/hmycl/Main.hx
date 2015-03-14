@@ -219,16 +219,6 @@ class Main extends Sprite {
 		test.draw(background);
 		test.draw(resultScreen);
 		
-		var temp = new TextFormat("Arial", 30, 0xFFFFFF);
-		textLoad = new TextField();
-		textLoad.defaultTextFormat = temp;
-		textLoad.x = 350;
-		textLoad.y = 600;
-		textLoad.autoSize = TextFieldAutoSize.CENTER;
-		textLoad.text = "Подождите пару секунд, загружаю картинку...";
-		
-		addChild(textLoad);
-		
 		var byteArray:ByteArray = test.encode ( new Rectangle(0, 0, test.width, test.height), new PNGEncoderOptions(false));
 		
 		if (vk != null)
