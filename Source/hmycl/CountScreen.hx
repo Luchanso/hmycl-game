@@ -7,6 +7,7 @@ import openfl.Assets;
 import openfl.events.Event;
 import openfl.events.MouseEvent;
 import openfl.Lib;
+import openfl.net.URLRequest;
 import openfl.text.TextField;
 import openfl.text.TextFieldAutoSize;
 import openfl.text.TextFormat;
@@ -16,7 +17,8 @@ class CountScreen extends Sprite {
 	
 	private var background:DrunkBackground;
 	private var formuls:Formuls;
-	private var callbackEnd:Dynamic;
+	private var callbackEnd:Void -> Void;
+	private var uploadResult:Dynamic;
 	
 	static inline var timeout1 = 3000;
 	static inline var timeout2 = 2000;
@@ -24,11 +26,12 @@ class CountScreen extends Sprite {
 	var timer : Int = 0;
 	var step : Int = 0;
 	
-	public function new(callbackEnd:Dynamic) {
+	public function new(callbackEnd:Void -> Void, uploadResult : Dynamic) {
 		
 		super ();
 		
 		this.callbackEnd = callbackEnd;
+		this.uploadResult = uploadResult;
 		
 		load ();
 		initialization ();
@@ -92,50 +95,54 @@ class CountScreen extends Sprite {
 		additionalInfo.defaultTextFormat = format;
 		additionalInfo.autoSize = TextFieldAutoSize.CENTER;
 		additionalInfo.text = "Подпишись, чтобы узнать результат!";
+		additionalInfo.selectable = false;
 		
-		additionalInfo.x = this.stage.width / 2 - additionalInfo.width / 2;
+		additionalInfo.x = 800 / 2 - additionalInfo.width / 2;
 		additionalInfo.y = 470;
 		
 		var btn = new Bitmap(Assets.getBitmapData("images/vkbtnpub.png"));
 		var btnhover = new Bitmap(Assets.getBitmapData("images/vkbtnpubhover.png"));
 		
 		var btnvk = new SimpleButton(btn, btnhover, btnhover, btn);
-		btnvk.x = this.stage.width / 2 - btnvk.width / 2;
+		btnvk.x =  800 / 2 - btnvk.width / 2;
 		btnvk.y = 520;
 		btnvk.addEventListener(MouseEvent.CLICK, publicEvent);
 		
 		addChild(additionalInfo);
 		addChild(btnvk);
+		trace("Finish");
 		
 		timer = Lib.getTimer();		
 		
-		//addEventListener(Event.ENTER_FRAME, update);
+		addEventListener(Event.ENTER_FRAME, update);
 	}
 	
-	private function publicEvent(e:MouseEvent):Void 
+	private function publicEvent(e:MouseEvent):Void
 	{
-		
+		Lib.getURL(new URLRequest(Settings.PUBLIC_URL), "_blank");
 	}
 	
-	function stepZeroFinish() {
-		
-	}
-	
-	private function update(e:Event):Void 
+	private function update(e:Event):Void
 	{
 		if (step == 0)
 		{
 			if (Lib.getTimer() - timer > timeout1)
 			{
-				stepZeroFinish();
 				step++;
+				
+				this.uploadResult(null);
+				
 				timer = Lib.getTimer();
 			}
 		}
 		else if (step == 1)
 		{
-			
+			if (Lib.getTimer() - timer > timeout2)
+			{
+				removeEventListener(Event.ENTER_FRAME, update);
+				this.callbackEnd();
+				step++;
+			}
 		}
 	}
-	
 }

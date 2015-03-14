@@ -8,10 +8,10 @@
     <movie fps="40" />
     <movie width="800" />
     <movie height="835" />
-    <movie version="1" />
+    <movie version="16" />
     <movie minorVersion="0" />
-    <movie platform="Lime" />
-    <movie background="FFFFFF" />
+    <movie platform="Flash Player" />
+    <movie background="#FFFFFF" />
     <movie preferredSDK=";3;" />
   </output>
   <!-- Other classes to be compiled into your SWF -->
@@ -40,6 +40,10 @@
   <compileTargets>
     <!-- example: <compile path="..." /> -->
   </compileTargets>
+  <!-- Assets to embed into the output SWF -->
+  <library>
+    <!-- example: <asset path="..." id="..." update="..." glyphs="..." mode="..." place="..." sharepoint="..." /> -->
+  </library>
   <!-- Paths to exclude from the Project Explorer tree -->
   <hiddenPaths>
     <hidden path="obj" />

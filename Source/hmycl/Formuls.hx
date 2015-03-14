@@ -56,6 +56,7 @@ class Formuls extends Sprite {
 		status.defaultTextFormat = format;
 		status.autoSize = TextFieldAutoSize.CENTER;
 		status.text = "Производятся расчёты: 0%";
+		status.selectable = false;
 		
 		status.x = 400 - status.textWidth / 2;
 		status.y = 325 - status.textHeight / 2;
@@ -80,13 +81,7 @@ class Formuls extends Sprite {
 		if (progress > 200) {
 			removeEventListener(Event.ENTER_FRAME, onEnterFrame);
 			
-			status.text = "Расчёты выполнены!";
-			
-			for (i in 0...formuls.length)
-			{
-				DeleteFormula(i);
-			}
-			
+			status.text = "Расчёты выполнены!";			
 			this.callback();
 		}
 		

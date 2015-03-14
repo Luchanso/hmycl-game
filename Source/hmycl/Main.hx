@@ -85,6 +85,7 @@ class Main extends Sprite {
 			paramsWindow.push("Сколько стоит твоя жизнь?");
 			
 			vk.callMethod(paramsWindow);
+			Settings.vk = vk;
 		}
 		#end
 		
@@ -112,7 +113,7 @@ class Main extends Sprite {
 		// вертикальный (AD_TYPE_VERTICAL) или горизонтальный (AD_TYPE_HORIZONTAL) блок баннеров
 		params.ad_type = com.vk.vo.BannersPanelVO.AD_TYPE_HORIZONTAL; 
 		params.ad_height = 0;
-		params.ad_width = 800;	
+		params.ad_width = 800;
 		// Вертикальный (AD_UNIT_TYPE_VERTICAL) или горизонтальный (AD_UNIT_TYPE_HORIZONTAL) баннер внутри блока баннеров
 		params.ad_unit_type = com.vk.vo.BannersPanelVO.AD_UNIT_TYPE_VERTICAL;		
 		params.ads_count = Settings.ADS_BOTTOM_COUNT;
@@ -152,7 +153,7 @@ class Main extends Sprite {
 		
 		background = new Bitmap (Assets.getBitmapData ("images/background.png"));
 		askScreen = new AskScreen (askScreenFinish);
-		countScreen = new CountScreen (countScreenFinish);		
+		countScreen = new CountScreen (countScreenFinish, startLoad);		
 	}
 	
 	private function initialization ():Void	{
@@ -212,7 +213,7 @@ class Main extends Sprite {
 	}
 	
 	private function startLoad(_):Void {
-		removeChild(btnvk);
+		//removeChild(btnvk);
 		
 		var test = new BitmapData(Math.round(this.stage.width), Math.round(this.stage.height));		
 		test.draw(background);
@@ -244,12 +245,13 @@ class Main extends Sprite {
 		countScreen.ads_init(flashVars);
 		
 		this.count = (((height * c * c) * 1 / 3600) / 1000) * 4.312341325 * (weight % 100 + 100);
+		
+		resultScreen = new ResultScreen(this.count);
 	}
 	
 	private function countScreenFinish ():Void {
 		
 		removeChild(countScreen);
-		resultScreen = new ResultScreen(this.count);
 		addChild(resultScreen);
 		
 		#if flash
