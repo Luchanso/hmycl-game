@@ -24,7 +24,7 @@ class CountScreen extends Sprite {
 	static inline var timeout2 = 2000;
 	
 	var timer : Int = 0;
-	var step : Int = 0;
+	var step : Int = -1;
 	
 	public function new(callbackEnd:Void -> Void, uploadResult : Dynamic) {
 		
@@ -114,7 +114,7 @@ class CountScreen extends Sprite {
 		
 		timer = Lib.getTimer();		
 		
-		addEventListener(Event.ENTER_FRAME, update);
+		addEventListener(Event.ENTER_FRAME, update);		
 	}
 	
 	private function publicEvent(e:MouseEvent):Void
@@ -124,13 +124,19 @@ class CountScreen extends Sprite {
 	
 	private function update(e:Event):Void
 	{
+		if (step == -1)
+		{
+			step++;				
+				
+			timer = Lib.getTimer();
+			this.uploadResult(null);
+		}
 		if (step == 0)
 		{
 			if (Lib.getTimer() - timer > timeout1)
 			{
 				step++;
 				
-				this.uploadResult(null);
 				
 				timer = Lib.getTimer();
 			}
