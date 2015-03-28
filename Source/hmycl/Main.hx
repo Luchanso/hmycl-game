@@ -245,15 +245,15 @@ class Main extends Sprite {
 		addChild(resultScreen);
 		
 		#if flash
-		/*var btn = new Bitmap(Assets.getBitmapData("images/vkbtn.png"));
+		var btn = new Bitmap(Assets.getBitmapData("images/vkbtn.png"));
 		var btnhover = new Bitmap(Assets.getBitmapData("images/vkbtnhover.png"));
 		
 		btnvk = new SimpleButton(btn, btnhover, btnhover, btn);
 		btnvk.x = 320;
 		btnvk.y = 600;
-		btnvk.addEventListener(MouseEvent.CLICK, startLoad);
+		/*btnvk.addEventListener(MouseEvent.CLICK, startLoad);*/
 		
-		addChild(btnvk);*/
+		addChild(btnvk);
 		#end
 	}
 }
